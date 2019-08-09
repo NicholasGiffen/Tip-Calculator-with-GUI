@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lblBill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:width="120dp"
+        android:background="#DDDDDDDD"
+        android:minWidth="120dp"
+        android:padding="10dp"
+        android:text="Bill ($)"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/lblTipPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblBill"
+        android:layout_alignLeft="@id/lblBill"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#DDDDDDDD"
+        android:minWidth="120dp"
+        android:padding="10dp"
+        android:text="Tip (%)"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/lblTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblTipPercent"
+        android:layout_alignLeft="@id/lblTipPercent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#DDDDDDDD"
+        android:minWidth="120dp"
+        android:padding="10dp"
+        android:text="Tip ($)"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/lblTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblTip"
+        android:layout_alignLeft="@id/lblTip"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#DDDDDDDD"
+        android:minWidth="120dp"
+        android:padding="10dp"
+        android:text="Total ($)"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/inputBill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/lblBill"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter Bill"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:textColor="#0000FF"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/inputTipPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputBill"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/lblTipPercent"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter tip %"
+        android:inputType="number"
+        android:padding="10dp"
+        android:textColor="#0000FF"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/lblTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputTipPercent"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/lblTip"
+        android:background="#40F0"
+        android:gravity="center"
+        android:minWidth="400dp"
+        android:padding="10dp"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/lblTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblTipAmount"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/lblTotal"
+        android:background="#40F0"
+        android:gravity="center"
+        android:minWidth="400dp"
+        android:padding="10dp"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblTotalAmount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#0F0"
+        android:onClick="calculate"
+        android:padding="10dp"
+        android:text="CALCULATE"
+        android:textSize="24sp" />
+
+</RelativeLayout>
